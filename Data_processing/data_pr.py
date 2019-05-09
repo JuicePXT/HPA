@@ -22,6 +22,9 @@ class Explo():
         statistics.loc['lower']=statistics.loc['25%'] - (statistics.loc['75%'] - statistics.loc['25%']) * 1.5
         return statistics
 
+    def non_analyze(self):
+        """缺失值分析"""
+
     def drawBox(self):
         """绘制箱形图"""
         pyplot.boxplot([self.data], labels=['Data'])
