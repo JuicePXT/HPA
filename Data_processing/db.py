@@ -18,7 +18,7 @@ class DB:
         self.conf=conf
     def getdata(self,tab,col='*',key=None):
         """从数据库获取数据,key指定索引"""
-        sql = 'select %s from %s limit 1000' %(col,tab) #
+        sql = 'select %s from %s' %(col,tab) #limit 1000测试条件限制读取记录条数
         data = pd.read_sql(sql,self.conndb,index_col=key)#获取数据'
         return data
     def store_df(self,dataframe,tabname='newtab'):
